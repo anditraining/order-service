@@ -49,9 +49,6 @@ public class Product implements Serializable {
 	}
 
 	public void setAddress(Address address) {
-		if (address == null || address.getState() == null || address.getPin() <= 0) {
-			throw new IllegalStateException("address is wrong");
-		}
 		this.address = address;
 	}
 

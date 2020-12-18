@@ -17,7 +17,7 @@ public class OrderController {
 	private ProductService productService;
 
 	@PostMapping("/order")
-	private Product saveBook(@RequestBody Product product) {	
+	private Product saveBook(@RequestBody Product product) {
 		productService.saveOrUpdate(product);
 		return product;
 	}

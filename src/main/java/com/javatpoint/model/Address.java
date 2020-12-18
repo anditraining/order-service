@@ -28,7 +28,7 @@ public class Address implements Serializable{
 	}
 	
 	public void setState(String state) {
-		if(state == null || state.isEmpty()) {
+		if(state == null || state.trim().isEmpty()) {
 			throw new IllegalStateException("state is wrong");
 		}
 		this.state = state;

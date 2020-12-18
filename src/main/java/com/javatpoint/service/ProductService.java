@@ -25,7 +25,6 @@ public class ProductService {
 
 	public void saveOrUpdate(Product product) {
 		repo.save(product);
-		
 		jmsTemplate.convertAndSend(MESSAGE_QUEUE, product);
 	}
 
